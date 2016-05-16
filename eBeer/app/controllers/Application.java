@@ -13,4 +13,9 @@ public class Application extends Controller {
         render();
     }
 
+    public static void status() {
+        boolean status = BrewAPIAccess.isAlive();
+        render(status);
+    }
+
 }
