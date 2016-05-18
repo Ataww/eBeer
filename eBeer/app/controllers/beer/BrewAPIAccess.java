@@ -1,11 +1,11 @@
-package controllers;
+package controllers.beer;
 
 import play.libs.WS;
 
 /**
  * Created by Ataw on 13/05/2016.
  */
-public class BrewAPIAccess {
+public final class BrewAPIAccess {
 
     public static final String ENDPOINT = "http://api.brewerydb.com/v2/";
 
@@ -20,7 +20,5 @@ public class BrewAPIAccess {
         }
         return false;
     }
-
-
 
 }
