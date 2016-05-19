@@ -12,7 +12,7 @@
 hs_err_pid*
 
 # intelliJ
-*.impl
+*.iml
 *.ipr
 *.iws
 
