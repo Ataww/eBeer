@@ -2,4 +2,7 @@
 
 require:
     - play
+    - play -> crud
     - commons-lang 2.6
+    - secure
+    - org.jadira.usertype -> usertype.extended 5.0.0.GA

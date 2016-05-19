@@ -14,3 +14,9 @@ GET     /public/                                staticDir:public
 
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}
+
+# crud
+* /admin    module:crud
+
+#secure
+# * / module:secure
