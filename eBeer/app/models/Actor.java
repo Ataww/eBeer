@@ -8,5 +8,5 @@ import javax.persistence.Entity;
  * Created by Ataw on 11/05/2016.
  */
 @Entity
-public class Actor extends Model {
+public class Actor extends ApplicationEntity {
 }
