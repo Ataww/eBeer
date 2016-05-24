@@ -3,7 +3,6 @@ package models;
 import play.data.validation.Required;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -21,20 +20,16 @@ public class Sale extends Resource {
 
     @ManyToOne(fetch = FetchType.EAGER, optional = false, targetEntity = User.class, cascade = CascadeType.ALL)
     @JoinColumn(name="SELLER_ID", nullable = true)
-    //@Required
     private User seller;
 
     @Column(nullable = false,updatable = false)
     @Required
-    //@Type(type= "org.jadira.usertype.dateandtime.threeten.PersistentLocalDate")
     private Date startDate;
 
     @Column
-    //@Type(type = "org.jadira.usertype.dateandtime.threeten.PersistentLocalDate")
     private Date expireDate;
 
     @ManyToOne(fetch = FetchType.EAGER, optional = false, targetEntity = Beer.class)
-    //@Required
     @Transient
     private Beer product;
 
