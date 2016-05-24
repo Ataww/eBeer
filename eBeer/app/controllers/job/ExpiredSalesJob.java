@@ -14,6 +14,7 @@ import java.util.List;
 @Every("1mn")
 public class ExpiredSalesJob extends Job {
 
+    @Override
     public void doJob() {
         List<Sale> sales = Sale.all().fetch();
         sales.forEach(ExpiredSalesJob::updateExpiredJob);

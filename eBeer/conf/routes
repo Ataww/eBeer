@@ -19,4 +19,4 @@ GET     /public/                                staticDir:public
 * /admin    module:crud
 
 #secure
-# * / module:secure
+* / module:secure
