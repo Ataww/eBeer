@@ -6,7 +6,6 @@ import play.jobs.Job;
 
 import java.time.LocalDate;
 import java.time.ZoneId;
-import java.time.chrono.ChronoLocalDate;
 import java.util.List;
 
 /**
@@ -17,11 +16,13 @@ public class ExpiredSalesJob extends Job {
 
     public void doJob() {
         List<Sale> sales = Sale.all().fetch();
-        for(Sale s : sales) {
-            if(LocalDate.now().isAfter(s.getExpireDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate())) {
-                s.setState(Sale.State.CLOSED);
-                s.save();
-            }
+        sales.forEach(ExpiredSalesJob::updateExpiredJob);
+    }
+
+    private static void updateExpiredJob(Sale s) {
+        if(LocalDate.now().isAfter(s.getExpireDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate())) {
+            s.setState(Sale.State.CLOSED);
+            s.save();
         }
     }
 }
