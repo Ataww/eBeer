@@ -3,6 +3,7 @@ package controllers.job;
 import models.User;
 import play.jobs.Job;
 import play.jobs.OnApplicationStart;
+import play.libs.Crypto;
 
 /**
  * <p>
@@ -17,7 +18,7 @@ public class AdminCreateJob extends Job {
     public void doJob() {
         User admin = new User();
         admin.setUsername("admin");
-        admin.setPassword("admin");
+        admin.setPassword(Crypto.encryptAES("admin"));
         admin.setEmail("admin@ebeer.com");
         admin.save();
     }

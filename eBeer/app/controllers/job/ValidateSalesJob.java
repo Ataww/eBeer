@@ -16,7 +16,7 @@ public class ValidateSalesJob extends Job {
 
     @Override
     public void doJob() {
-        List<Sale> sales = Sale.find("state", Sale.State.CREATED.toString()).fetch();
+        List<Sale> sales = Sale.find("state", Sale.State.CREATED).fetch();
         sales.forEach(ValidateSalesJob::validateSale);
     }
 
