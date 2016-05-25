@@ -1,0 +1,16 @@
+#{extends 'main.html' /}
+#{set title:'eBeer - Signup' /}
+<main class="container grey lighten-3">
+    #{if created}
+        <div class="row">
+            <p class="success"><i class="material-icons prefix">done</i>User created! You can now login.</p>
+        </div>
+    #{/if}
+    #{else}
+        <div class="row">
+            <p class="error"><i class="material-icons prefix">error_outline</i>Failed user creation.</p>
+        </div>
+    #{/else}
+</main>
+<footer class="page-footer center orange darken-4">
+</footer>

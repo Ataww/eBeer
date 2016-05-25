@@ -1,0 +1,18 @@
+#{extends 'main.html' /}
+#{set title:'eBeer - Home' /}
+<main class="container grey lighten-3">
+    <div class="row">
+        <div class="col s12">Username: ${user.username}</div>
+        <div class="col s12">email: ${user.email}</div>
+        <div class="col s12">
+            <p>Sales:</p>
+            #{list items:user.sales, as:'s'}
+            <div class="sale row">
+                <p>${s.quantity} ${s.product} on ${s.startDate} [${s.state}]</p>
+            </div>
+            #{/list}
+        </div>
+    </div>
+</main>
+<footer class="page-footer center orange darken-4">
+</footer>
