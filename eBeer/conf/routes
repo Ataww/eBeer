@@ -4,8 +4,17 @@
 
 # Home page
 GET     /                                       Application.index
+
+# beer
 GET /status Application.status
 GET /testBeers Application.testBeers
+
+# auth
+GET /signup Register.signup
+POST /register Register.register
+
+# profile
+GET /profile/{username} Profile.profile
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

@@ -9,14 +9,18 @@ import play.mvc.*;
 
 public class Application extends Controller {
 
-	public static void index() {
-		render();
-	}
-
 	public static void status() {
 		boolean status = BrewAPIAccess.isAlive();
 		render(status);
 	}
+    public static void index() {
+        if (session.contains("username")) {
+            String username = session.get("username");
+            render(username);
+        } else {
+            render();
+        }
+    }
 
 	public static void testBeers() {
 		JsonElement beersJson = BrewAPIAccess.getAllBeers();
