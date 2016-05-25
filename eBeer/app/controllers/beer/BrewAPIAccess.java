@@ -1,5 +1,7 @@
 package controllers.beer;
 
+import com.google.gson.JsonElement;
+
 import play.libs.WS;
 
 /**
@@ -19,6 +21,30 @@ public final class BrewAPIAccess {
             return true;
         }
         return false;
+    }
+    
+    public static JsonElement getAllBeers() {
+    	WS.WSRequest request = WS.url(SERVICE_URL + "beers");
+    	request.parameters.put("key", API_KEY);
+    	request.parameters.put("abv", "0,20");
+    	request.parameters.put("p", 1);
+    	request.parameters.put("format", "json");
+    	WS.HttpResponse res = request.get();
+    	if(res.success()) {
+    		return res.getJson();
+    	}
+    	return null;
+    }
+    
+    public static JsonElement getBeerById(String id) {
+    	WS.WSRequest request = WS.url(SERVICE_URL + "beer/" + id);
+    	request.parameters.put("key", API_KEY);
+    	request.parameters.put("format", "json");
+    	WS.HttpResponse res = request.get();
+    	if(res.success()) {
+    		return res.getJson();
+    	}
+    	return null;
     }
 
 }
