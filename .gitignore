@@ -21,5 +21,6 @@ tmp/
 
 
 
-*.iml
-module/
+eBeer/eBeer.iml
+modules/
+eBeer/modules/
