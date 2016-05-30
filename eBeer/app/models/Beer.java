@@ -10,7 +10,7 @@ import javax.persistence.Transient;
 @Entity
 public class Beer extends Resource {
 
-    @Transient
+    @Column
     private String name;
 
     // beer's id retrieved from the BreweryDB API.
@@ -23,6 +23,14 @@ public class Beer extends Resource {
 
     public void setBeerId(String beerId) {
         this.beerId = beerId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
