@@ -1,0 +1,19 @@
+#{extends 'main.html' /}
+#{set title:'sBeer - Beers' /}
+<main class="container grey lighten-3">
+    <table>
+    <tr>
+    	<th>Nom</th>
+    	<th>Id</th>
+    </tr>
+    #{list items:beers, as:'beer'}
+    	<tr>
+	        <td>${beer.name}</td>
+	        <td>${beer.beerId}</td>
+	    </tr>
+    #{/list}
+	</table>
+</main>
+<footer class="page-footer center orange darken-4">
+    <a href="/">home</a>
+</footer>
