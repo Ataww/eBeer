@@ -2,20 +2,20 @@
 #{set title:'eBeer - '+user.username /}
 <main class="container grey lighten-3">
     <div class="row">
-        #{if username}
-        #{if username.equals(user.username)}
-        <a href="/profile/${username}/edit" class="btn waves-effect waves-orange">edit</a>
-        #{/if}
-        #{/if}
-        <div class="col s12">Username: ${user.username}</div>
-        <div class="col s12">email: ${user.email}</div>
+    #{if username && username.equals(user.username)}
         <div class="col s12">
-            <p>Sales:</p>
-            #{list items:user.sales, as:'s'}
+            <a href="/profile/${user.username}/edit" class="btn waves-effect waves-orange">edit</a>
+        </div>
+    #{/if}
+        <div class="col s12">&{'profile.username'}: ${user.username}</div>
+        <div class="col s12">&{'profile.email'}: ${user.email}</div>
+        <div class="col s12">
+            <p>&{'profile.sales'}:</p>
+        #{list items:user.sales, as:'s'}
             <div class="sale row">
                 <p>${s.quantity} ${s.product} on ${s.startDate} [${s.state}]</p>
             </div>
-            #{/list}
+        #{/list}
         </div>
     </div>
 </main>

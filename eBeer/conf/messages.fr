@@ -1,0 +1,66 @@
+secure.username=Nom d'utilisateur :
+secure.password=Mot de passe :
+secure.remember=Se souvenir de moi
+secure.signin=Se connecter
+secure.error=Nom d'utilisateur ou mot de passe erroné
+secure.logout=Vous êtes déconnecté.
+
+# For use in JavaExtensions.since tag
+since.seconds = il y a %s seconde%s
+since.minutes = il y a %s minute%s
+since.hours   = il y a %s heure%s
+since.days    = il y a %s jour%s
+since.months  = il y a %s mois
+since.years   = il y a %s an%s
+since.format  = d MMM, yyyy
+
+# Validation messages
+validation.required=Obligatoire !
+validation.minSize=La taille minimum est %2$d
+validation.maxSize=La taille maximum est %2$d
+validation.email=Adresse mail invalide
+validation.range=Doit être entre %2$d et %3$d
+validation.min=Ne peut être inférieur à %2$d
+validation.max=Ne peut être supérieur à %2$d
+validation.match=Doit correspondre à %2$s
+validation.isTrue=Doit être coché
+validation.equals=Doit être égal à &{%2$s}
+validation.invalid=Valeur incorrecte
+validation.future=Doit être dans le futur
+validation.after=Doit être après %2$s
+validation.past=Doit être dans le passé
+validation.before=Doit être avant %2$s
+validation.object=Échec de la validation
+validation.notFound=Objet introuvable pour id %2$s
+validation.url=URL invalide
+validation.phone=Numéro de téléphone invalide
+validation.ipv4=Not a valid IP address
+validation.ipv6=Not a valid IP v6 address
+validation.unique=Déjà pris !
+
+# main
+main.apistatus=Statut de l'API
+main.testbeer=Test API
+main.profile=Mon compte
+main.login=Se connecter
+main.logout=Se déconnecter
+main.signup=Créer un compte
+
+#index
+index.title=Accueil
+
+#profile
+profile.username=Nom d'utilisateur
+profile.email=Adresse email
+profile.sales=Ventes
+
+#signup
+signup.title=Inscription
+signup.username=Nom d'utilisateur
+signup.password=Mot de passe
+signup.email=adresse email
+
+#register
+register.title=Enregistrement
+register.success=Inscription réussie! Merci d'avoir rejoint eBeer, vous pouvez dés à présent vous connecter.
+register.failure=Oups. L'inscription a échoué.

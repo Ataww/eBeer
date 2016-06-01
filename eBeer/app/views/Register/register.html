@@ -1,14 +1,14 @@
 #{extends 'main.html' /}
-#{set title:'eBeer - Signup' /}
+#{set title:'eBeer - '+register.title /}
 <main class="container grey lighten-3">
     #{if created}
         <div class="row">
-            <p class="success"><i class="material-icons prefix">done</i>User created! You can now login.</p>
+            <p class="success"><i class="material-icons prefix">done</i>&{'register.success'}</p>
         </div>
     #{/if}
     #{else}
         <div class="row">
-            <p class="error"><i class="material-icons prefix">error_outline</i>Failed user creation.</p>
+            <p class="error"><i class="material-icons prefix">error_outline</i>&{'register.failure'}</p>
         </div>
     #{/else}
 </main>

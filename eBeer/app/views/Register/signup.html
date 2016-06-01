@@ -1,21 +1,21 @@
 #{extends 'main.html' /}
-#{set title:'eBeer - Signup' /}
+#{set title:'eBeer - '+play.i18n.Messages.get('signup.title') /}
 <main class="container grey lighten-3">
     <form method="post" action="register" class="col s12">
         <div class="input-field col s6">
             <i class="material-icons prefix">account_circle</i>
             <input placeholder="username" type="text" id="username-field" name="username-field" class="validate" />
-            <label for="username-field">Username</label>
+            <label for="username-field">&{'signup.username'}</label>
         </div>
         <div class="input-field col s6">
             <i class="material-icons prefix">lock_outline</i>
             <input type="password" id="password-field" name="password-field" class="validate" />
-            <label for="password-field">Password</label>
+            <label for="password-field">&{'signup.password'}</label>
         </div>
         <div class="input-field col s12">
             <i class="material-icons prefix">email</i>
             <input placeholder="email" type="email" id="email-field" name="email-field" class="validate" />
-            <label for="email-field">Email</label>
+            <label for="email-field">&{'signup.email'}</label>
         </div>
         <div class="input-field col s12">
             <input type="submit" />

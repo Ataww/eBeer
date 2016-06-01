@@ -1,3 +1,31 @@
 # You can specialize this file for each language.
 # For example, for French create a messages.fr file
 #
+
+
+# main
+main.apistatus=API status
+main.testbeer=API test
+main.profile=My Account
+main.login=Log in
+main.logout=Log out
+main.signup=Créer un compte
+
+#index
+index.title=Home
+
+#profile
+profile.username=Username
+profile.email=Email address
+profile.sales=Sales
+
+#signup
+signup.title=Signup
+signup.username=Username
+signup.password=Password
+signup.email=Email address
+
+#register
+register.title=Register
+register.success=Registration successful! Thank you for joining eBeer. You can now log into your account.
+register.failure=Ooops. Registration failed.

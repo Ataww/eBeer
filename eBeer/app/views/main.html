@@ -18,14 +18,15 @@
                 <a href="#" class="brand-logo">eBeer</a>
                 <ul id="nav-list" class="right hide-on-med-and-down">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/status">API Status</a></li>
-                    <li><a href="/testBeers">Test Beer</a></li>
+                    <li><a href="/status">&{'main.apistatus'}</a></li>
+                    <li><a href="/testBeers">&{'main.testbeer'}</a></li>
                     #{if username}
-                        <li><a href="/profile/${username}">Profile</a></li>
-                        <li><a href="/logout">Logout</a></li>
+                        <li><a href="/profile/${username}">&{'main.profile'}</a></li>
+                        <li><a href="/logout">&{'main.logout'}</a></li>
                     #{/if}
                     #{else }
-                        <li><a href="/login">Login</a></li>
+                        <li><a href="/login">&{'main.login'}</a></li>
+                        <li><a href="/signup">&{'main.signup'}</a></li>
                     #{/else}
                 </ul>
             </div>
