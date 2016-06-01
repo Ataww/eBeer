@@ -59,8 +59,13 @@ signup.title=Inscription
 signup.username=Nom d'utilisateur
 signup.password=Mot de passe
 signup.email=adresse email
+signup.submit=S'enregistrer
 
 #register
 register.title=Enregistrement
 register.success=Inscription réussie! Merci d'avoir rejoint eBeer, vous pouvez dés à présent vous connecter.
 register.failure=Oups. L'inscription a échoué.
+
+#signin
+signin.signup=Vous n'avez pas de compte?
+signin.signupbtn=Inscrivez vous

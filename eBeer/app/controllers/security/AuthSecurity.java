@@ -1,5 +1,6 @@
 package controllers.security;
 
+import controllers.Application;
 import controllers.Secure;
 import models.User;
 import play.Logger;
@@ -19,6 +20,10 @@ public class AuthSecurity extends Secure.Security {
     static boolean authenticate(String username, String password) {
         String encryptedPass = Crypto.encryptAES(password);
         User user = User.find("username",username).first();
-        return user.getPassword().equals(encryptedPass);
+        return user != null && user.getPassword().equals(encryptedPass);
+    }
+
+    static void onDisconnected() {
+        Application.index();
     }
 }
