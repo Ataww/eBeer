@@ -10,16 +10,16 @@ import play.mvc.Controller;
  */
 public class Register extends Controller {
 
-    public static void signup() {
-        render();
-    }
+	public static void signup() {
+		render();
+	}
 
-    public static void register() {
-        String username = params.get("username-field");
-        String email = params.get("email-field");
-        String password = params.get("password-field");
-        F.Promise<Boolean> create = new CreateUserJob(email,username,password).now();
-        Boolean created = await(create);
-        render(created);
-    }
+	public static void register() {
+		String username = params.get("username-field");
+		String email = params.get("email-field");
+		String password = params.get("password-field");
+		F.Promise<Boolean> create = new CreateUserJob(email, username, password).now();
+		Boolean created = await(create);
+		render(created);
+	}
 }

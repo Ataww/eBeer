@@ -1,8 +1,12 @@
 package models;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Transient;
+
+import com.google.gson.Gson;
 
 /**
  * Created by couretn on 19/05/16.
@@ -37,6 +41,11 @@ public class Beer extends Resource {
     public String toString() {
         return name;
     }
+
+	public static String findByName(String term, int AUTOCOMPLETEMAX) {
+		List<Beer> beers = Beer.find("byTitleLike", "%term%").fetch(AUTOCOMPLETEMAX);
+		return new Gson().toJson(beers);
+	}
 
 
 }

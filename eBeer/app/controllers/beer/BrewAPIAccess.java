@@ -36,7 +36,7 @@ public final class BrewAPIAccess {
 			JsonArray jsonData;
 			JsonElement resJson = res.getJson();
 			int nbPages = resJson.getAsJsonObject().get("numberOfPages").getAsInt();
-			nbPages = 2; // delete later
+			nbPages = 10; // delete later
 			for (int i = 1; i <= nbPages; i++) {
 				request = WS.url(SERVICE_URL + "beers");
 				request.parameters.put("key", API_KEY);
