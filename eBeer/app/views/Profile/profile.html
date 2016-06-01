@@ -1,7 +1,12 @@
 #{extends 'main.html' /}
-#{set title:'eBeer - Home' /}
+#{set title:'eBeer - '+user.username /}
 <main class="container grey lighten-3">
     <div class="row">
+        #{if username}
+        #{if username.equals(user.username)}
+        <a href="/profile/${username}/edit" class="btn waves-effect waves-orange">edit</a>
+        #{/if}
+        #{/if}
         <div class="col s12">Username: ${user.username}</div>
         <div class="col s12">email: ${user.email}</div>
         <div class="col s12">
