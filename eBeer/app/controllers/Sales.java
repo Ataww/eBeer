@@ -11,8 +11,9 @@ public class Sales extends CRUD {
 	public static void createSale() {
 
 	}
-
+	
 	public static void choosebeer() {
 		render();
 	}
+
 }

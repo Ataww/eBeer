@@ -23,7 +23,6 @@ hs_err_pid*
 *eclipse/
 
 tmp/
-app/
 
 modules/
 eBeer/modules/
