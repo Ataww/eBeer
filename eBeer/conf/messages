@@ -18,6 +18,8 @@ index.title=Home
 profile.username=Username
 profile.email=Email address
 profile.sales=Sales
+profile.edit=Edit
+profile.createsale=New Sale
 
 #signup
 signup.title=Signup
@@ -34,3 +36,10 @@ register.failure=Ooops. Registration failed.
 #signin
 signin.signup=Don't have an account yet?
 signin.signupbtn=Sign up now
+
+#edit
+edit.oldpassword=Old password
+edit.newpassword=New password
+edit.submit=Update
+
+index

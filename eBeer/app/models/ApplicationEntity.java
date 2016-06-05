@@ -5,6 +5,9 @@ import play.db.jpa.GenericModel;
 import javax.persistence.*;
 
 /**
+ * <p>
+ * Root class for entities. Contains a generic db id and set the JPA inheritance strategy up.
+ * </p>
  * Created by couretn on 19/05/16.
  */
 @MappedSuperclass

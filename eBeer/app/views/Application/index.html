@@ -2,6 +2,29 @@
 #{set title:'eBeer - '+play.i18n.Messages.get('index.title') /}
 <main class="container grey lighten-3">
 
+    <div class="row">
+        #{if username}
+        <div class="col">
+            #{list items:user.sales, as:'s'}
+                <div class="sale row">
+                    <p>${s.quantity} ${s.product} on ${s.startDate} [${s.state}]</p>
+                </div>
+            #{/list}
+        </div>
+        #{/if}
+        #{else}
+
+        #{/else}
+    </div>
+    <div class="row">
+        <div class="col s12 m6">
+            <h5>&{'index.recentsales'}</h5>
+            #{list items:recentSales, as:'s'}
+
+            #{/list}
+        </div>
+    </div>
+
 </main>
 <footer class="page-footer center orange darken-4">
 </footer>

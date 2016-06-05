@@ -53,6 +53,8 @@ index.title=Accueil
 profile.username=Nom d'utilisateur
 profile.email=Adresse email
 profile.sales=Ventes
+profile.edit=Editer
+profile.createsale=Nouvelle vente
 
 #signup
 signup.title=Inscription
@@ -69,3 +71,8 @@ register.failure=Oups. L'inscription a échoué.
 #signin
 signin.signup=Vous n'avez pas de compte?
 signin.signupbtn=Inscrivez vous
+
+#edit
+edit.oldpassword=Ancien Mot de passe
+edit.newpassword=Nouveau Mot de passe
+edit.submit=Mettre à jour

@@ -19,18 +19,18 @@ public class Sale extends Resource {
     }
 
     @ManyToOne(fetch = FetchType.EAGER, optional = false, targetEntity = User.class, cascade = CascadeType.ALL)
-    @JoinColumn(name="SELLER_ID", nullable = true)
+    @JoinColumn(name="SELLER_ID", nullable = false)
+    @Required
     private User seller;
 
     @Column(nullable = false,updatable = false)
-    @Required
     private Date startDate;
 
     @Column
     private Date expireDate;
 
     @ManyToOne(fetch = FetchType.EAGER, optional = false, targetEntity = Beer.class)
-    @Transient
+    @Required
     private Beer product;
 
     @Column(nullable = false)

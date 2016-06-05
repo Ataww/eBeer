@@ -14,8 +14,10 @@ GET /choosebeer Sales.choosebeer
 GET /signup Register.signup
 POST /register Register.register
 
-# profile
+# user profile
 GET /profile/{username} Profile.profile
+GET /profile/{username}/edit Profile.edit
+POST /profile/{username}/edit Profile.submit
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
