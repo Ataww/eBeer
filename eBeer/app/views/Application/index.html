@@ -1,30 +1,57 @@
 #{extends 'main.html' /}
 #{set title:'eBeer - '+play.i18n.Messages.get('index.title') /}
 <main class="container grey lighten-3">
-
-    <div class="row">
-        #{if username}
-        <div class="col">
-            #{list items:user.sales, as:'s'}
-                <div class="sale row">
-                    <p>${s.quantity} ${s.product} on ${s.startDate} [${s.state}]</p>
-                </div>
-            #{/list}
-        </div>
-        #{/if}
-        #{else}
-
-        #{/else}
-    </div>
     <div class="row">
         <div class="col s12 m6">
-            <h5>&{'index.recentsales'}</h5>
-            #{list items:recentSales, as:'s'}
+            <div class="card orange darken-3">
+                <div class="card-content white-text">
+                    <span class="card-title">&{'index.recentsales'}</span>
+                    <div class="collection brown-text">
+                    #{list items:recentSales, as:'s'}
+                        <div class="collection-item">&{s.quantity} &{s.product.name} - &{s.seller}</div>
+                    #{/list}
+                    </div>
+                </div>
+                <div class="card-action white">
+                    <a href="#" class="btn waves-effect waves-orange brown">&{'index.createsale'}</a>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6">
+            #{if username}
+            <div class="card orange darken-3">
+                <div class="card-content white-text">
+                    <span class="card-title">Hello ${username}</span>
 
-            #{/list}
+                    <div class="collection brown-text">
+                        <div class="collection-header">&{'profile.sales'}:</div>
+                        #{list items:user.sales, as:'s'}
+                            <div class="collection-item">
+                                ${s.quantity} ${s.product} on ${s.startDate} [${s.state}]
+                            </div>
+                        #{/list}
+                    </div>
+                </div>
+                <div class="card-action white">
+                    <a href="/profile/&{username}" class="btn waves-effect waves-orange brown">&{'main.profile'}</a>
+                    <a href="#" class="btn waves-effect waves-orange orange brown">&{'index.createsale'}</a>
+                </div>
+            </div>
+            #{/if}
+            #{else}
+                <div class="card orange darken-3">
+                    <div class="card-content white-text">
+                        <span class="card-title">Welcome!</span>
+                        <p>It seems you're not connected. If you're interested in selling or buying beers, please create an account to enter the marketplace.<br>
+                        If you already have an account, you can login to access you personal space.</p>
+                    </div>
+                    <div class="card-action white">
+                        <a href="/login" class="btn waves-effect waves-orange brown">&{'main.login'}</a>
+                        <a href="/signup" class="btn waves-effect waves-orange brown">&{'main.signup'}</a>
+                    </div>
+                </div>
+            #{/else}
         </div>
     </div>
 
 </main>
-<footer class="page-footer center orange darken-4">
-</footer>

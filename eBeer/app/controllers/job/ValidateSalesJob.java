@@ -9,6 +9,9 @@ import java.util.Date;
 import java.util.List;
 
 /**
+ * <p>
+ *     Validate a sale
+ * </p>
  * Created by couretn on 24/05/16.
  */
 @Every("1mn")
@@ -23,9 +26,10 @@ public class ValidateSalesJob extends Job {
     private static void validateSale(Sale s) {
         if (s.getExpireDate() != null && s.getExpireDate().before(Date.from(Instant.now())) || s.getQuantity() <= 0) {
             s.setState(Sale.State.CLOSED);
+        } else {
+            s.setStartDate(Date.from(Instant.now()));
+            s.setState(Sale.State.VALIDATED);
         }
-        s.setStartDate(Date.from(Instant.now()));
-        s.setState(Sale.State.VALIDATED);
         s.save();
     }
 }

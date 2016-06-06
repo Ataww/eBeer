@@ -19,7 +19,7 @@ GET /signup Register.signup
 POST /register Register.register
 
 # user profile
-GET /profile/{username} Profile.profile
+GET /profile/{name} Profile.profile
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

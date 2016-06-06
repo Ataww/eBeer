@@ -18,12 +18,20 @@
     <body>
 
 
+        <ul id="sales-dropdown" class="dropdown-content brown-text">
+            <li><a href="#!">&{'main.sales.browse'}</a></li>
+            #{if username}
+                <li><a href="#!">&{'main.sales.create'}</a>
+            #{/if}
+            <li><a href="#!"></a></li>
+        </ul>
         <nav class="orange darken-4">
             <div class="nav-wrapper container">
                 <a href="/" class="brand-logo">eBeer</a>
                 <ul id="nav-list" class="right hide-on-med-and-down">
                     <li><a href="/">&{'index.title'}</a></li>
                     <li><a href="/beers">&{'main.testbeer'}</a></li>
+                    <li><a href="#!" class="dropdown-button" data-activates="sales-dropdown">&{'main.sales'}</a></li>
                     #{if username}
                         <li><a href="/profile/${username}">&{'main.profile'}</a></li>
                         <li><a href="/logout">&{'main.logout'}</a></li>
@@ -36,6 +44,17 @@
             </div>
         </nav>
         #{doLayout /}
+
+        <footer class="page-footer center orange darken-4">
+            <div class="row">
+                <div class="col s12 center-align grey-text text-darken-3">
+                &{'index.footer.about'} <a href="http://www.brewerydb.com" class=" blue-grey-text text-darken-4">http://www.brewerydb.com</a>
+                </div>
+            </div>
+            <div class="footer-copyright grey-text text-lighten-2">
+            &{'index.footer.copyright'}
+            </div>
+        </footer>
         
     </body>
 </html>

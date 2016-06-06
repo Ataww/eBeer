@@ -10,6 +10,7 @@ import controllers.beer.BrewAPIAccess;
 import models.Beer;
 import models.Sale;
 import models.User;
+import play.Logger;
 import play.mvc.*;
 
 public class Application extends Controller {
@@ -21,9 +22,10 @@ public class Application extends Controller {
     }
 
     public static void index() {
-        List<Sale> recentSales = Sale.find("select s from Sale s order by startDate").fetch(10);
+        List<Sale> recentSales = Sale.find("select s from Sale s where s.state = ? order by startDate desc",Sale.State.VALIDATED).fetch(10);
         String username = session.get("username");
         User user = User.find("username",username).first();
+        Logger.info("Connected as user "+username);
         boolean status = BrewAPIAccess.isAlive();
         render(username,recentSales,user,status);
     }

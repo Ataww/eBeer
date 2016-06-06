@@ -8,9 +8,10 @@
     </div>
     <div class="row">
     #{if username && username.equals(user.username)}
-        <div class="col s12">
+        <div class="col s11 push-s1">
             <a href="/profile/${user.username}/edit" class="btn waves-effect waves-orange">&{'profile.edit'}</a>
             <a href="#" class="btn waves-effect waves-orange">&{'profile.createsale'}</a>
+            <p></p>
         </div>
     #{/if}
         <div class="col s5 push-s1">&{'profile.username'}: ${user.username}<br/>&{'profile.email'}: ${user.email}</div>
