@@ -6,6 +6,9 @@ import play.libs.F;
 import play.mvc.Controller;
 
 /**
+ * <p>
+ *     Controller handling the registering process of a user.
+ * </p>
  * Created by Ataw on 22/05/2016.
  */
 public class Register extends Controller {
