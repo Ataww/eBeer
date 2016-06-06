@@ -1,6 +1,7 @@
 package controllers;
 
 import java.util.Date;
+import java.util.List;
 
 import models.Beer;
 import models.Sale;
@@ -15,7 +16,8 @@ import play.mvc.With;
 public class Sales extends CRUD {
 
 	public static void createsale() {
-		render();
+		String username = session.get("username");
+		render(username);
 	}
 
 	public static void submitsale() {
@@ -35,7 +37,6 @@ public class Sales extends CRUD {
 		validation.required("user", user);
 		if(!validation.hasErrors())
 			sale.save();
-		render(user, beer, quantity);
+		render(username, beer, quantity);
 	}
-
 }

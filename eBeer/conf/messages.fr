@@ -65,10 +65,13 @@ profile.email=Adresse email
 profile.sales=Vos Ventes
 profile.edit=Editer
 profile.createsale=Nouvelle vente
-profile.sales.beer=Bière
-profile.sales.quantity=Quantité
-profile.sales.startdate=Date vente
-profile.sales.state=Etat vente
+
+#sales
+sales.beer=Bière
+sales.quantity=Quantité
+sales.startdate=Date vente
+sales.state=Etat vente
+sales.list=Liste des ventes
 
 #signup
 signup.title=Inscription

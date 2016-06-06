@@ -1,0 +1,31 @@
+#{extends 'main.html' /}
+#{set title:'eBeer - all sales'/}
+<main class="container grey lighten-3">
+    <div class="row">
+        <div class="col s10 push-s1">
+            <h4 class="center-align">&{'sales.list'}</h4>
+            <div class="sale row">
+              <table class="striped">
+		        <thead>
+		          <tr>
+		              <th data-field="beer">&{'sales.beer'}</th>
+		              <th data-field="quantity">&{'sales.quantity'}</th>
+		              <th data-field="startDate">&{'sales.startdate'}</th>
+		              <th data-field="state">&{'sales.state'}</th>
+		          </tr>
+		        </thead>
+		        <tbody>
+			        #{list items:sales, as:'s'}
+			          <tr>
+			            <td>${s.product}</td>
+			            <td>${s.quantity}</td>
+			            <td>${s.startDate}</td>
+			            <td>${s.state}</td>
+			          </tr>
+			        #{/list}
+		        </tbody>
+		      </table>
+            </div>
+        </div>
+    </div>
+</main>

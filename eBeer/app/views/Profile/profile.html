@@ -1,19 +1,19 @@
 #{extends 'main.html' /}
 #{set title:'eBeer - '+user.username /}
 <main class="container grey lighten-3">
-    <div class="row">
-        <div class="col s11 push-s1">
+    <div class="row valign">
+        <div class="col s5 push-s1">
             <h3>My account</h3>
         </div>
+	    #{if username && username.equals(user.username)}
+	        <div class="col s6 valign right-align">
+	        	<p></p>
+	            <a href="/profile/${user.username}/edit" class="btn waves-effect waves-orange">&{'profile.edit'}</a>
+	            <a href="/createsale" class="btn waves-effect waves-orange">&{'profile.createsale'}</a>
+	        </div>
+	    #{/if}
     </div>
     <div class="row">
-    #{if username && username.equals(user.username)}
-        <div class="col s11 push-s1">
-            <a href="/profile/${user.username}/edit" class="btn waves-effect waves-orange">&{'profile.edit'}</a>
-            <a href="#" class="btn waves-effect waves-orange">&{'profile.createsale'}</a>
-            <p></p>
-        </div>
-    #{/if}
         <div class="col s5 push-s1">&{'profile.username'}: ${user.username}<br/>&{'profile.email'}: ${user.email}</div>
         <br/><br/>
         <div class="col s10 push-s1">
@@ -43,5 +43,3 @@
         </div>
     </div>
 </main>
-<footer class="page-footer center orange darken-4">
-</footer>
