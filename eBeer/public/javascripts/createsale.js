@@ -5,7 +5,7 @@ $(document).ready(function(){
     $(this).autocomplete({
         minLength: 3,
         source : function(req, resp) {
-          $.getJSON("@{Beers.getBeersByName()}?term=" + req.term , req, function(data) {
+          $.getJSON("getbeersbyname?term=" + req.term, function(data) {
             var suggestions = [];
             $.each(data, function(i, val) {
               var obj = {};

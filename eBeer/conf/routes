@@ -8,6 +8,7 @@ GET     /                                       Application.index
 # beer
 GET /status Application.status
 GET /beers Application.beers
+GET /getbeersbyname Beers.getBeersByName
 
 # sale
 GET /createsale Sales.createsale

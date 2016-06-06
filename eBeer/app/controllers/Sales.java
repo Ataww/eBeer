@@ -31,7 +31,7 @@ public class Sales extends CRUD {
 		sale.setState(State.CREATED);
 		sale.setSeller(user);
 		validation.required("beer", beer);
-		validation.min("quantity", quantity, 0);
+		validation.min("quantity", quantity, 1);
 		validation.required("user", user);
 		if(!validation.hasErrors())
 			sale.save();

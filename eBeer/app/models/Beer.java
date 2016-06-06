@@ -43,7 +43,7 @@ public class Beer extends Resource {
     }
 
 	public static String findByName(String term, int AUTOCOMPLETEMAX) {
-		List<Beer> beers = Beer.find("byTitleLike", "%term%").fetch(AUTOCOMPLETEMAX);
+		List<Beer> beers = Beer.find("byNameLike", "%" + term + "%").fetch(AUTOCOMPLETEMAX);
 		return new Gson().toJson(beers);
 	}
 

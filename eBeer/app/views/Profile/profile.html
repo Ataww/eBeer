@@ -2,7 +2,7 @@
 #{set title:'eBeer - '+user.username /}
 <main class="container grey lighten-3">
     <div class="row">
-        <div class="col s12">
+        <div class="col s11 push-s1">
             <h3>My account</h3>
         </div>
     </div>
@@ -13,15 +13,32 @@
             <a href="#" class="btn waves-effect waves-orange">&{'profile.createsale'}</a>
         </div>
     #{/if}
-        <div class="col s12">&{'profile.username'}: ${user.username}</div>
-        <div class="col s12">&{'profile.email'}: ${user.email}</div>
-        <div class="col s12">
-            <p>&{'profile.sales'}:</p>
-        #{list items:user.sales, as:'s'}
+        <div class="col s5 push-s1">&{'profile.username'}: ${user.username}<br/>&{'profile.email'}: ${user.email}</div>
+        <br/><br/>
+        <div class="col s10 push-s1">
+            <h4 class="center-align">&{'profile.sales'}</h4>
             <div class="sale row">
-                <p>${s.quantity} ${s.product} on ${s.startDate} [${s.state}]</p>
+              <table class="striped">
+		        <thead>
+		          <tr>
+		              <th data-field="beer">&{'profile.sales.beer'}</th>
+		              <th data-field="quantity">&{'profile.sales.quantity'}</th>
+		              <th data-field="startDate">&{'profile.sales.startdate'}</th>
+		              <th data-field="state">&{'profile.sales.state'}</th>
+		          </tr>
+		        </thead>
+		        <tbody>
+			        #{list items:user.sales, as:'s'}
+			          <tr>
+			            <td>${s.product}</td>
+			            <td>${s.quantity}</td>
+			            <td>${s.startDate}</td>
+			            <td>${s.state}</td>
+			          </tr>
+			        #{/list}
+		        </tbody>
+		      </table>
             </div>
-        #{/list}
         </div>
     </div>
 </main>

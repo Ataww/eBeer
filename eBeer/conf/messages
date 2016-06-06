@@ -27,6 +27,10 @@ profile.email=Email address
 profile.sales=Your Sales
 profile.edit=Edit
 profile.createsale=New Sale
+profile.sales.beer=Beer
+profile.sales.quantity=Quantity
+profile.sales.startdate=Sale Start Date
+profile.sales.state=Sale State
 
 #signup
 signup.title=Signup
