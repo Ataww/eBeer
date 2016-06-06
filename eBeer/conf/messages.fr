@@ -86,3 +86,8 @@ signin.signupbtn=Inscrivez vous
 edit.oldpassword=Ancien Mot de passe
 edit.newpassword=Nouveau Mot de passe
 edit.submit=Mettre à jour
+
+#createsale
+createsale.submit=Enregistrer la vente
+createsale.success=Vente enregistrée
+createsale.fail=Echec lors de la création de la vente

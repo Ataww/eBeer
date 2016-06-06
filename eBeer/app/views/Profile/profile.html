@@ -7,21 +7,18 @@
         </div>
     </div>
     <div class="row">
-    #{if username && username.equals(user.username)}
-        <div class="col s12">
-            <a href="/profile/${user.username}/edit" class="btn waves-effect waves-orange">&{'profile.edit'}</a>
-            <a href="#" class="btn waves-effect waves-orange">&{'profile.createsale'}</a>
-        </div>
-    #{/if}
         <div class="col s12">&{'profile.username'}: ${user.username}</div>
         <div class="col s12">&{'profile.email'}: ${user.email}</div>
         <div class="col s12">
             <p>&{'profile.sales'}:</p>
-        #{list items:user.sales, as:'s'}
-            <div class="sale row">
-                <p>${s.quantity} ${s.product} on ${s.startDate} [${s.state}]</p>
+            <div class="collection">
+                <span
+            #{list items:user.sales, as:'s'}
+                <div class="sale collection-item">
+                    <p>${s.quantity} ${s.product} on ${s.startDate} [${s.state}]</p>
+                </div>
+            #{/list}
             </div>
-        #{/list}
         </div>
     </div>
 </main>

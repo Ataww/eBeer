@@ -52,5 +52,7 @@ edit.oldpassword=Old password
 edit.newpassword=New password
 edit.submit=Update
 
-#index
-
+#createsale
+createsale.submit=Create Sale
+createsale.success=Sale created
+createsale.fail=Sale creation failed

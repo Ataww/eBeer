@@ -1,16 +1,16 @@
 #{extends 'main.html' /}
 #{set title:'eBeer - '+play.i18n.Messages.get('register.title') /}
 <main class="container grey lighten-3">
-    #{if created}
         <div class="row">
-            <p class="success"><i class="material-icons prefix">done</i>&{'register.success'}</p>
+            <div class="col s12">
+                #{if created}
+                <p class="success"><i class="material-icons prefix">done</i>&{'register.success'}</p>
+                #{/if}
+                #{else}
+                    <p class="error"><i class="material-icons prefix">error_outline</i>&{'register.failure'}</p>
+                #{/else}
+            </div>
         </div>
-    #{/if}
-    #{else}
-        <div class="row">
-            <p class="error"><i class="material-icons prefix">error_outline</i>&{'register.failure'}</p>
-        </div>
-    #{/else}
 </main>
 <footer class="page-footer center orange darken-4">
 </footer>
