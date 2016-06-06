@@ -52,7 +52,7 @@ index.title=Accueil
 #profile
 profile.username=Nom d'utilisateur
 profile.email=Adresse email
-profile.sales=Ventes
+profile.sales=Vos Ventes
 profile.edit=Editer
 profile.createsale=Nouvelle vente
 
@@ -76,3 +76,7 @@ signin.signupbtn=Inscrivez vous
 edit.oldpassword=Ancien Mot de passe
 edit.newpassword=Nouveau Mot de passe
 edit.submit=Mettre à jour
+
+#index
+index.recentsales=Ventes Récentes
+index.createsale=Nouvelle vente

@@ -9,15 +9,22 @@ main.testbeer=API test
 main.profile=My Account
 main.login=Log in
 main.logout=Log out
-main.signup=Créer un compte
+main.signup=Make an account
 
 #index
 index.title=Home
+index.recentsales=Recent sales
+index.createsale=New Sale
+index.welcome=Welcome!
+index.welcome.signup=It seems you're not connected. If you're interested in selling or buying beers, please create an account to enter the marketplace.
+index.welcome.login=If you already have an account, you can login to access you personal space.
+index.footer.about=eBeer is powered by the BreweryDB API. For more informations, visit
+index.footer.copyright=© 2016 - eBeer
 
 #profile
 profile.username=Username
 profile.email=Email address
-profile.sales=Sales
+profile.sales=Your Sales
 profile.edit=Edit
 profile.createsale=New Sale
 
@@ -42,4 +49,5 @@ edit.oldpassword=Old password
 edit.newpassword=New password
 edit.submit=Update
 
-index
+#index
+
