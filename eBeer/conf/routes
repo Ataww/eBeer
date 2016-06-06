@@ -15,6 +15,7 @@ GET /createsale Sales.createsale
 POST /submitsale Sales.submitsale
 GET /showsales PublicSales.showsales
 GET /showsale/{id} Sales.showsale
+GET /buy/{id} Sales.buy
 
 # auth
 GET /signup Register.signup

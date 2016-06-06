@@ -41,6 +41,9 @@ sales.seller=Seller
 sales.about=About the beer
 sales.abv=ABV
 sales.description=Description
+sales.buy=Buy
+sales.success=Purchase done
+sales.failure=Error during purchase
 
 #signup
 signup.title=Signup

@@ -76,6 +76,9 @@ sales.seller=Vendeur
 sales.about=A propos de la bière
 sales.abv=Titrage
 sales.description=Description
+sales.buy=Acheter
+sales.success=Achat effectué
+sales.failure=Erreur lors de l'achat
 
 #signup
 signup.title=Inscription

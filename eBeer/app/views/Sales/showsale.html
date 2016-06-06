@@ -4,7 +4,12 @@
     <div class="row">
     	<div class="col s12">
     		<p></p>
-	    	<h4 class="center-align">${sale.quantity} x ${sale.product.name}</h4>
+	    	<h4 class="center-align">
+	    		${sale.quantity} x ${sale.product.name}
+	    		#{if saleValidated}
+	    		<a href="/buy/${sale.id}" class="btn waves-effect waves-orange">&{'sales.buy'}</a>
+	    		#{/if}
+	    	</h4>
 	      	<div class="col s6 push-s6 center-align">
 	      		&{'sales.seller'}: ${sale.seller.username}
 	    	</div>

@@ -1,0 +1,16 @@
+#{extends 'main.html' /}
+#{set title:'eBeer - buy' /}
+<main class="container grey lighten-3">
+        <div class="row">
+            <div class="col s11 push-s1">
+            	#{if success}
+                	<p class="success"><i class="material-icons prefix">done</i>&{'sales.success'}</p>
+                #{/if}
+                #{else}
+                	<p class="error"><i class="material-icons prefix">error_outline</i>&{'sales.failure'}</p>
+                #{/else}
+            </div>
+        </div>
+</main>
+<footer class="page-footer center orange darken-4">
+</footer>

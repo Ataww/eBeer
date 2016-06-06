@@ -50,6 +50,19 @@ public class Sales extends CRUD {
 		JsonObject jsonObject = BrewAPIAccess.getBeerById(beer.getBeerId()).getAsJsonObject();
 		String abv = jsonObject.get("abv") == null ? "" : jsonObject.get("abv").getAsString();
 		String description = jsonObject.get("description") == null ? "" : jsonObject.get("description").getAsString();
-		render(username, sale, abv, description);
+		boolean saleValidated = sale.getState() == State.VALIDATED;
+		render(username, sale, abv, description, saleValidated);
+	}
+
+	public static void buy(long id) {
+		boolean success = false;
+		String username = session.get("username");
+		Sale sale = Sale.find("Id", id).first();
+		if (sale != null && !(sale.getState() == State.COMPLETED)) {
+			sale.setState(State.COMPLETED);
+			sale.save();
+			success = true;
+		}
+		render(username, success);
 	}
 }
