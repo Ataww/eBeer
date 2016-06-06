@@ -3,6 +3,9 @@ package controllers;
 import java.util.Date;
 import java.util.List;
 
+import com.google.gson.JsonObject;
+
+import controllers.beer.BrewAPIAccess;
 import models.Beer;
 import models.Sale;
 import models.Sale.State;
@@ -35,8 +38,18 @@ public class Sales extends CRUD {
 		validation.required("beer", beer);
 		validation.min("quantity", quantity, 1);
 		validation.required("user", user);
-		if(!validation.hasErrors())
+		if (!validation.hasErrors())
 			sale.save();
 		render(username, beer, quantity);
+	}
+
+	public static void showsale(long id) {
+		String username = session.get("username");
+		Sale sale = Sale.find("Id", id).first();
+		Beer beer = sale.getProduct();
+		JsonObject jsonObject = BrewAPIAccess.getBeerById(beer.getBeerId()).getAsJsonObject();
+		String abv = jsonObject.get("abv").getAsString();
+		String description = jsonObject.get("description").getAsString();
+		render(username, sale, abv, description);
 	}
 }

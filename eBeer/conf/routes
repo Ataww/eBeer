@@ -14,6 +14,7 @@ GET /getbeersbyname Beers.getBeersByName
 GET /createsale Sales.createsale
 POST /submitsale Sales.submitsale
 GET /showsales PublicSales.showsales
+GET /showsale/{id} Sales.showsale
 
 # auth
 GET /signup Register.signup

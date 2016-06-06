@@ -33,7 +33,8 @@ public class Application extends Controller {
 
 	public static void beers() {
 		List<Beer> beers = Beer.all().fetch();
-		render(beers);
+		String username = session.get("username");
+		render(username, beers);
 	}
 
 }

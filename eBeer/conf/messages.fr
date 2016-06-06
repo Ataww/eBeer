@@ -72,6 +72,10 @@ sales.quantity=Quantité
 sales.startdate=Date vente
 sales.state=Etat vente
 sales.list=Liste des ventes
+sales.seller=Vendeur
+sales.about=A propos de la bière
+sales.abv=Titrage
+sales.description=Description
 
 #signup
 signup.title=Inscription

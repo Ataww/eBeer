@@ -64,7 +64,8 @@ public final class BrewAPIAccess {
 		request.parameters.put("format", "json");
 		WS.HttpResponse res = request.get();
 		if (res.success()) {
-			return res.getJson();
+			JsonElement jsonData = res.getJson().getAsJsonObject().get("data");
+			return jsonData;
 		}
 		return null;
 	}

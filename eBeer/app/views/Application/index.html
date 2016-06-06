@@ -8,7 +8,9 @@
                     <span class="card-title">&{'index.recentsales'}</span>
                     <div class="collection brown-text">
                     #{list items:recentSales, as:'s'}
-                        <div class="collection-item">&{s.quantity} &{s.product.name} - &{s.seller}</div>
+	                    <a class="collection-item brown-text" href="/showsale/&{s.id}">
+						    &{s.quantity} &{s.product.name} - &{s.seller}
+						</a>
                     #{/list}
                     </div>
                 </div>
@@ -26,9 +28,9 @@
                     <div class="collection brown-text">
                         <div class="collection-header">&{'profile.sales'}:</div>
                         #{list items:user.sales, as:'s'}
-                            <div class="collection-item">
-                                ${s.quantity} ${s.product} on ${s.startDate} [${s.state}]
-                            </div>
+		                    <a class="collection-item brown-text" href="/showsale/&{s.id}">
+							    ${s.quantity} ${s.product} on ${s.startDate} [${s.state}]
+							</a>
                         #{/list}
                     </div>
                 </div>

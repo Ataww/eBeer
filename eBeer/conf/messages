@@ -37,6 +37,10 @@ sales.quantity=Quantity
 sales.startdate=Sale Start Date
 sales.state=Sale State
 sales.list=Sales list
+sales.seller=Seller
+sales.about=About the beer
+sales.abv=ABV
+sales.description=Description
 
 #signup
 signup.title=Signup

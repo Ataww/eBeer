@@ -10,13 +10,13 @@ import play.mvc.Controller;
  */
 public class Profile extends Controller {
 
-    public static void profile(String name) {
-        User user = User.find("username",name).first();
-        String username = session.get("username");
-        if(user == null) {
-            redirect("/");
-        } else {
-            render(user,username);
-        }
-    }
+	public static void profile(String name) {
+		User user = User.find("username", name).first();
+		String username = session.get("username");
+		if (user == null) {
+			redirect("/");
+		} else {
+			render(user, username);
+		}
+	}
 }

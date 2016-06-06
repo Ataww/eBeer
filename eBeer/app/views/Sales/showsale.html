@@ -1,0 +1,23 @@
+#{extends 'main.html' /}
+#{set title:'eBeer - sale ' + sale.quantity + ' x ' + 'sale.product'/}
+<main class="container grey lighten-3">
+    <div class="row">
+    	<div class="col s12">
+    		<p></p>
+	    	<h4 class="center-align">${sale.quantity} x ${sale.product.name}</h4>
+	      	<div class="col s6 push-s6 center-align">
+	      		&{'sales.seller'}: ${sale.seller.username}
+	    	</div>
+	   	</div>
+        <div class="col s10 push-s1">
+    		<h4 class="left-align">&{'sales.about'}</h4>
+	    	<div class="col s5">
+	    		<strong>&{'sales.description'}:</strong><br/>
+	    		${description}
+	    	</div>
+	      	<div class="col s4 push-s1">
+	      		<strong>&{'sales.abv'}:</strong> ${abv}
+	    	</div>
+        </div>
+    </div>
+</main>

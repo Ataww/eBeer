@@ -5,7 +5,7 @@
         <div class="col s10 push-s1">
             <h4 class="center-align">&{'sales.list'}</h4>
             <div class="sale row">
-              <table class="striped">
+              <table class="striped responsive-table">
 		        <thead>
 		          <tr>
 		              <th data-field="beer">&{'sales.beer'}</th>
@@ -16,12 +16,12 @@
 		        </thead>
 		        <tbody>
 			        #{list items:sales, as:'s'}
-			          <tr>
-			            <td>${s.product}</td>
-			            <td>${s.quantity}</td>
-			            <td>${s.startDate}</td>
-			            <td>${s.state}</td>
-			          </tr>
+				          <tr>
+		                    <td><a class="black-text" href="/showsale/&{s.id}">${s.product}</a></td>
+				            <td>${s.quantity}</td>
+				            <td>${s.startDate}</td>
+				            <td>${s.state}</td>
+				          </tr>
 			        #{/list}
 		        </tbody>
 		      </table>
