@@ -80,3 +80,8 @@ edit.submit=Mettre à jour
 #index
 index.recentsales=Ventes Récentes
 index.createsale=Nouvelle vente
+
+#createsale
+createsale.submit=Enregistrer la vente
+createsale.success=Vente enregistrée
+createsale.fail=Echec lors de la création de la vente

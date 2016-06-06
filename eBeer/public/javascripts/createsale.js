@@ -1,22 +1,3 @@
-#{extends 'main.html' /}
-#{set title:'New sale' /}
-<main class="container grey lighten-3">
-	<h4>Recherche de bière par nom</h4>
-	<div>
-		<form>
-			<input type="text" class="ui-state-default autocomplete" name="beer.name" value="" />
-		</form>
-	</div>
-	<h4>Recherche de bière par autres critères</h4>
-	<div>
-		
-	</div>
-</main>
-<footer class="page-footer center orange darken-4">
-    <a href="/">home</a>
-</footer>
-
-<script>
 $(document).ready(function(){
   $('input.autocomplete').each( function() {
     var $input = $(this);
@@ -24,7 +5,6 @@ $(document).ready(function(){
     $(this).autocomplete({
         minLength: 3,
         source : function(req, resp) {
-        	alert('salut les amis');
           $.getJSON("@{Beers.getBeersByName()}?term=" + req.term , req, function(data) {
             var suggestions = [];
             $.each(data, function(i, val) {
@@ -39,4 +19,3 @@ $(document).ready(function(){
       });
   });
 });
-</script>

@@ -8,7 +8,10 @@ GET     /                                       Application.index
 # beer
 GET /status Application.status
 GET /beers Application.beers
-GET /choosebeer Sales.choosebeer
+
+# sale
+GET /createsale Sales.createsale
+POST /submitsale Sales.submitsale
 
 # auth
 GET /signup Register.signup
