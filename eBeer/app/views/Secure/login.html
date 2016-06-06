@@ -1,0 +1,50 @@
+#{extends 'Secure/layout.html' /}
+#{set title:'eBeer - '+play.i18n.Messages.get('main.login') /}
+<main class="container">
+<div id="login">
+	
+	<h1>&{'secure.title'}</h1>
+		
+	#{form @authenticate(), class:'col s12'}
+		
+		#{if flash.error}
+			<p class="error">
+				&{flash.error}
+			</p>
+		#{/if}
+		#{if flash.success}
+			<p class="success">
+				&{flash.success}
+			</p>
+		#{/if}
+	    <div class="row">
+            <div class="input-field col">
+
+                <input placeholder="username" type="text" name="username" value="${flash.username}" />
+                <label for="username">&{'secure.username'}</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col">
+
+                <input placeholder="password" type="password" name="password" />
+                <label for="password">&{'secure.password'}</label>
+            </div>
+        </div>
+        <div class="row">
+            <p id="remember-field">
+                <input type="checkbox" name="remember" id="remember" value="true" ${flash.remember ? 'checked="true"' : ''} />
+                <label for="remember">&{'secure.remember'}</label>
+            </p>
+        </div>
+        <div class="row">
+            <p id="signin-field">
+                <button type="submit" id="signin" class="btn waves-effect waves-light teal btn-large">&{'secure.signin'} <i class="material-icons right">send</i></button>
+            </p>
+        </div>
+        <div class="row">
+            &{'signin.signup'} <a href="/signup" class="btn waves-effect waves-light orange ">&{'signin.signupbtn'}</a>
+        </div>
+    #{/form}
+</div>
+</main>

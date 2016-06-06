@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title>eBeer - &{'main.login'}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=${_response_encoding}"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="@{'/public/stylesheets/secure.css'}" />
+        <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+    </head>
+    <body>
+        <nav class="orange darken-4">
+            <div class="nav-wrapper container">
+                <a href="/" class="brand-logo">eBeer</a>
+                <ul id="nav-list" class="right hide-on-med-and-down">
+                    <li><a href="/">&{'index.title'}</a></li>
+                </ul>
+            </div>
+        </nav>
+        #{doLayout /}
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" type="text/javascript" charset="${_response_encoding}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js" type="text/javascript" charset="${_response_encoding}"></script>
+    </body>
+</html>
