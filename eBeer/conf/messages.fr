@@ -45,9 +45,19 @@ main.profile=Mon compte
 main.login=Se connecter
 main.logout=Se déconnecter
 main.signup=Créer un compte
+main.sales=Ventes
+main.sales.browse=Parcourir
+main.sales.create=Créer
 
 #index
 index.title=Accueil
+index.recentsales=Dernières ventes
+index.createsale=Nouvelle vente
+index.welcome=Bienvenue!
+index.welcome.signup=Il semble que vous n'êtes pas connecté. Pour rejoindre eBeer et commencer à vendre ou acheter des bières, veuillez créer un compte.
+index.welcome.login=Si vous avez déjà un compte, veuillez-vous connecter.
+index.footer.about=eBeer utilise l'API BreweryDB. Pour plus d'informations, visitez
+index.footer.copyright=© 2016 - eBeer
 
 #profile
 profile.username=Nom d'utilisateur
@@ -76,7 +86,3 @@ signin.signupbtn=Inscrivez vous
 edit.oldpassword=Ancien Mot de passe
 edit.newpassword=Nouveau Mot de passe
 edit.submit=Mettre à jour
-
-#index
-index.recentsales=Ventes Récentes
-index.createsale=Nouvelle vente

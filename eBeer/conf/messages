@@ -10,6 +10,9 @@ main.profile=My Account
 main.login=Log in
 main.logout=Log out
 main.signup=Make an account
+main.sales=Sales
+main.sales.browse=Browse
+main.sales.create=Create
 
 #index
 index.title=Home
