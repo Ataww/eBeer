@@ -12,7 +12,8 @@ public final class BrewAPIAccess {
 
 	public static final String SERVICE_URL = "http://api.brewerydb.com/v2/";
 
-	private static final String API_KEY = "9127482462bf1e2e65f934ad1d9bc30b";
+	// private static final String API_KEY = "9127482462bf1e2e65f934ad1d9bc30b";
+	private static final String API_KEY = "bb27a96d73001749c8e5a9895e11649f";
 
 	public static boolean isAlive() {
 		WS.WSRequest request = WS.url(SERVICE_URL + "heartbeat");

@@ -48,8 +48,8 @@ public class Sales extends CRUD {
 		Sale sale = Sale.find("Id", id).first();
 		Beer beer = sale.getProduct();
 		JsonObject jsonObject = BrewAPIAccess.getBeerById(beer.getBeerId()).getAsJsonObject();
-		String abv = jsonObject.get("abv").getAsString();
-		String description = jsonObject.get("description").getAsString();
+		String abv = jsonObject.get("abv") == null ? "" : jsonObject.get("abv").getAsString();
+		String description = jsonObject.get("description") == null ? "" : jsonObject.get("description").getAsString();
 		render(username, sale, abv, description);
 	}
 }
